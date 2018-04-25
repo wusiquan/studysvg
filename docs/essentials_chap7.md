@@ -21,5 +21,5 @@
 `element.textContent` 获取或修改任何结点文本内容
 
 
-[例子](wusiquan.github.io/studysvg/examples/essentials_chap7/1.html)
+[例子](https://wusiquan.github.io/studysvg/examples/essentials_chap7/1.html)
 
