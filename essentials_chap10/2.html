@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <meta charset="utf8">
+    <title>svg精髓第10章 -- Clipping and Masking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+      * { margin: 0; padding: 0; }
+    </style>
+  </head>
+  <body>
+    <svg width="350" height="500" viewBox="0 0 350 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <clipPath id="curveClip">
+          <path id="curve1" d="M5 55 C 25 5, 45 -25, 75 55, 85 85, 20 105, 40 55 Z" style="stroke: black; fill: none;" />
+        </clipPath>
+        <clipPath id="textClip">
+          <text id="text1" x="20" y="20" transform="rotate(60)" style="font-family: monaco; font-size: 48px; stroke: black; fill: none;">
+            CLIP
+          </text>
+        </clipPath>
+        <g id="shapes">
+          <rect x="0" y="50" width="90" height="60" style="fill: #999;"/>
+          <circle cx="25" cy="25" r="25" style="fill: #666;"/>
+          <polygon points="30 0 80 0 80 100" style="fill: #ccc;"/>
+        </g>
+      </defs>
+
+      <!-- <use xlink:href="#shapes" style="clip-path: url(#curveClip);" />
+      <g transform="translate(100, 0)">
+        <use xlink:href="#shapes" />
+        <use xlink:href="#curve1" />
+      </g> -->
+
+      <use transform="translate(0, 100)" xlink:href="#shapes" style="clip-path: url(#textClip);"/>
+      <g transform="translate(100, 150)">
+        <use xlink:href="#shapes" />
+        <use xlink:href="#text1" />
+      </g>
+
+      <!-- <use xlink:href="#shapes" style="clip-path: url(#curveClip);" /> -->
+    </svg>
+  </body>
+</html>
