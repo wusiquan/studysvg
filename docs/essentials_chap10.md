@@ -12,9 +12,7 @@
 
 一个最简单的例子：建立一个矩形裁剪路径
 
-```html
-
-```
+(Figure 10-1. Simple rectangular clipping](https://wusiquan.github.io/studysvg/essentials_chap10/1.html)
 
 
 
