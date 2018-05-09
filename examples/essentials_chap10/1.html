@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <meta charset="utf8">
+    <title>svg精髓第10章 -- Clipping and Masking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="1.css">
+  </head>
+  <body>
+    <svg width="200" height="110" viewBox="0 0 200 110" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+  <clipPath id="rectClip">
+    <rect id="rect1" x="15" y="15" width="40" height="45" style="stroke: gray; fill: none;"></rect>
+  </clipPath>
+  </defs>
+
+  <g id="clipped" style="display: block">
+    <!-- clip to rectangle -->
+    <use xlink:href="minicat.svg#cat" style="clip-path: url(#rectClip);"></use>
+  </g>
+  
+  <!-- for reference, show entire picture with clipping area outlined -->
+  <g id="unclipped" transform="translate(100, 0)">
+    <use xlink:href="#rect1"></use>    <!-- show clip rectangle -->
+    <use xlink:href="minicat.svg#cat"></use>
+  </g>
+</svg>
+  </body>
+</html>

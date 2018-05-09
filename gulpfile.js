@@ -7,7 +7,7 @@ gulp.task('browsersync', () => {
     // 不打开浏览器
     open: false,
     server: {
-      baseDir: './examples'
+      baseDir: '.'
     }
   })
 })
