@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/wusiquan/studysvg#readme",
   "devDependencies": {
-    "browser-sync": "^2.23.7",
+    "browser-sync": "^2.24.6",
     "gulp": "^3.9.1"
   }
 }
